@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Add</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container-add">
+        <h1>Add student</h1>
+        <form action="/add" method="POST" id="form">
+            <label for="student_number">Student Number: </label>
+            <input type="text" name="student_number" id="number" class="input-area">
+
+            <br><br>
+
+            <label for="student_name">Student Name: </label>
+            <input type="text" name="student_name" id="name" class="input-area">
+
+            <br><br>
+
+            <label for="credits">Credits: </label>
+            <input type="text"  name="credits" id="credits" class="input-area">
+
+            <br><br>
+
+            <label for="degree_programme">Degree Programme: </label>
+            <input type="text" name="degree_programme" id="programme" class="input-area">
+
+            <br><br><br>
+
+            <input type="submit" value="Add" class="button">
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Home</title>
+{% endblock %}
+
+
+{% block body %}
+<div class="content">
+    <h1>Update Student</h1>
+
+    <form action="/update/{{student.student_number}}" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" class="input" value="{{student.name}}">
+        <br><br>
+        <label for="credits">Credits:</label>
+        <input type="text" name="credits" id="credits"class="input" value="{{student.credits}}">
+        <br><br>
+        <label for="degree">Degree:</label>
+        <input type="text" name="degree" id="degree" class="input" value="{{student.degree}}">
+        <br><br><br>
+        <input type="submit" value="Update">
+    </form>
+</div>
+{% endblock %}
